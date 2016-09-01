@@ -1,0 +1,50 @@
+#!/bin/bash
+if [ -z "${1}" ]; then
+echo "No File Mentioned!!!"
+return
+fi
+
+fileext="${1}"
+IFS='.' read -ra the_file <<< "$fileext"
+#wc $fileext > /dev/null 2>&1
+cat $fileext &> /dev/null
+success=`echo $?`
+if [ $success -ne 0 ];
+then
+echo "Creating a new File '${fileext}' ....."
+fi
+touch $fileext
+len=(`wc $fileext`)
+if [ ${len[0]} -lt 3 ]; then
+filename=${the_file[0]}
+ext=${the_file[1]}
+case $ext in "java" ) cat ~/Templates/javaheader > $fileext;
+						echo "public class $filename{" | cat >> $fileext;
+						cat ~/Templates/java >> $fileext ;; esac
+case $ext in "c" ) cat ~/Templates/c > $fileext;; esac
+case $ext in "cpp" ) cat ~/Templates/cpp > $fileext;; esac
+case $ext in "html" ) cat ~/Templates/html > $fileext;; esac
+case $ext in "php" ) cat ~/Templates/html > $fileext;; esac
+case $ext in "asm" ) cat ~/Templates/asm > $fileext;; esac
+
+echo "Text Editors available : "
+PS3="Select Editor: ";export PS3
+select selected in atom gedit nano vi discard
+do
+	case $selected in
+		atom|gedit|nano|vi) echo "Opening $fileext in $selected Please wait..."; $selected $fileext; break ;;
+		discard) echo "File discarded"; rm -f $fileext; break ;;
+		*) echo "Not opening the file"; break ;;
+	esac
+done
+else
+echo "Text Editors available : "
+PS3="Select Editor: ";export PS3
+select selected in atom gedit nano vi
+do
+	case $selected in
+		atom|gedit|nano|vi) echo "Opening $fileext in $selected Please wait..."; $selected $fileext; break ;;
+		*) echo "Created the file, but not opening it"; break ;;
+	esac
+done
+fi
