@@ -1,0 +1,22 @@
+#!/bin/bash
+echo -e "\033[0;34m\033[1mCompiling.... \033[0m"
+if g++ -std=c++11 "$PWD/${1}.cpp"
+then
+  if [ -z "${2}" ]; then
+    echo -e "\033[0;34m\033[1mCompiled...Executing \033[0m"
+    echo -e "\033[0;32m\033[1m-----Output----------\033[0m"
+    echo -e ""
+    ./a.out
+  elif [ -n "${3}" ]; then
+    echo -e "\033[0;34m\033[1mCompiled...Executing \033[0m"
+    ./a.out < "${2}" > "${3}"
+  else
+    echo -e "\033[0;34m\033[1mCompiled...Executing \033[0m"
+    echo -e "\033[0;32m\033[1m-----Output----------\033[0m"
+    echo -e ""
+    ./a.out < "${2}"
+  fi
+else
+  echo -e "\033[0;31m\033[1mcompile time error. Couldn't execute\033[0m"
+fi;
+echo -e "\033[0;32m\033[1m-----The End----------\033[0m"
