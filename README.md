@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<body>
 		<h1><center>THE SHELL UTILITIES</center></h1>
