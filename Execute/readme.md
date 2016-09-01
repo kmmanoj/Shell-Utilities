@@ -14,6 +14,6 @@
 		    <li>Download the repository</li>
 		    <li>Run ./install.sh in the repository</li>
 		  </ul>
-		  And to install the utility, run ./uninstall.sh in the repository
+		  And to uninstall the utility, run ./uninstall.sh in the repository
 	</body>
 </html>
