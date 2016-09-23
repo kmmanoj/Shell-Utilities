@@ -12,4 +12,5 @@ else
   case $ext in "py" ) pyexe $filename ${2} ${3};; esac
   case $ext in "asm" ) asmexe $filename ;; esac
   case $ext in "js" ) jsexe $filename ;; esac
+  case $ext in "r" ) rexe $filename ;; esac
 fi;
