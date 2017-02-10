@@ -31,6 +31,7 @@ void printUsage(){
     system("echo \" exe program_file \\033[3moptions \\033[0m \"");
     system("echo \" exe program_file input_file output_file\"");
     system("echo \" exe program_file input_file \"");
+    system("echo \" exe program_file \"");
     printf("\n");
     // options
     system("echo \"\\033[1mOPTIONS: \\033[0m \"");
