@@ -1,7 +1,7 @@
 Here is the command, that is more flexible than the shell command
 
 Compile the c code as :
-<code>sudo gcc exe.c -o /usr/bin/local/exe</code>
+<code>sudo gcc exe.c -o /usr/local/bin/exe</code>
 
 Now, you can use the <code>exe<code> command as follows:
 
