@@ -12,7 +12,7 @@ Now, you can use this command as follows:
  exe program_file input_file <br/>
 
 <b>OPTIONS:  </b>
-<table>
+<table border="0">
  <tr>
   <td>-i input_file</td>
   <td></td>
