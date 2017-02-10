@@ -10,6 +10,7 @@ Now, you can use this command as follows:
  exe program_file options  <br/>
  exe program_file input_file output_file<br>
  exe program_file input_file <br/>
+ exe program_file <br/>
 
 <b>OPTIONS:  </b>
 <table border="0">
