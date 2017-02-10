@@ -4,7 +4,6 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <regex.h>
 
 // function declarations
 int error();
@@ -96,7 +95,7 @@ int compile(char *input_file){
 
 int main(int argc, char* argv[]){
     // If only the command is entered, or command is entered with '--help or -h' option then print the help text
-    if(argc==1 || (argc==2 && (strcmp(argv[1],"-h")==0 || strcmp(argv[1],"-help")==0))) help();
+    if(argc==1 || (argc==2 && (strcmp(argv[1],"-h")==0 || strcmp(argv[1],"--help")==0))) help();
     system("echo \"\\033[0;34m\\033[1mCompiling.... \\033[0m\"");
 
     // compile the input file
