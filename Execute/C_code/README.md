@@ -1,10 +1,9 @@
 Here is the command, that is more flexible than the shell command
 
 Compile the c code as :
-<code>gcc exe.c -o exe</code>
+<code>sudo gcc exe.c -o /usr/bin/local/exe</code>
 
-and move the executable to : <code>/usr/local/bin</code>
-Now, you can use this command as follows:
+Now, you can use the <code>exe<code> command as follows:
 
 <b>USAGE:</b><br/>
  exe program_file options  <br/>
