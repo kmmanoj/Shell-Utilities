@@ -1,7 +1,6 @@
 <html>
 	<body>
-		<h1><center>THE SHELL UTILITIES</center></h1>
-		<hr/>
+		<h1>THE SHELL UTILITIES</h1>
 		<ul>
 			<li>Can't Remember commands in linux?</li>
 			<li>Tired of using same sequence of commands?</li>
